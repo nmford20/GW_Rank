@@ -5,10 +5,10 @@
 
 You will need to build the 'gwemopt' tool, follow the readme instructions in that folder for setup.
 Currently, to get all the components of the code to be located on the python path I need to add the following to the .rc file for my local shell:
- export PYTHONPATH=$PYTHONPATH:$HOME/path/to/GW_Rank
- export PYTHONPATH=$PYTHONPATH:$HOME/path/to/GW_Rank/GW_LIGO_gcn
- export PYTHONPATH=$PYTHONPATH:$HOME/path/to/GW_Rank/HOGWARTs
- export PYTHONPATH=$PYTHONPATH:$HOME/path/to/GW_Rank/gwemopt
+export PYTHONPATH=$PYTHONPATH:$HOME/path/to/GW_Rank
+export PYTHONPATH=$PYTHONPATH:$HOME/path/to/GW_Rank/GW_LIGO_gcn
+export PYTHONPATH=$PYTHONPATH:$HOME/path/to/GW_Rank/HOGWARTs
+export PYTHONPATH=$PYTHONPATH:$HOME/path/to/GW_Rank/gwemopt
 where $HOME/path/to/GW_Rank is the path to wherever you save the GW_Rank repo locally. In the future I will fix this so you don't need to manually add the paths.
 
 ## Directories:
