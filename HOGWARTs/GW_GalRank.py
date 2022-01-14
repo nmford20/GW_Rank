@@ -68,7 +68,7 @@ from observability import check_obs
     
     """
 
-def GW_GalRank(skymap,prob,distest,diststd,distmu,distsigma,distnorm,nside,graceid,prelim,url_main,local_path,outputdir):
+def GalRank(skymap,prob,distest,diststd,distmu,distsigma,distnorm,nside,graceid,prelim,url_main,local_path,outputdir):
 
     #create integrated probability skymap
     csm=integrated_probability(prob)
@@ -111,7 +111,6 @@ def GW_GalRank(skymap,prob,distest,diststd,distmu,distsigma,distnorm,nside,grace
     if 'bayestar' in url_main:
         url='https://gracedb.ligo.org/api/superevents/'+graceid+'/files/bayestar.multiorder.fits'+after
     else:
-        print(version)
         url='https://gracedb.ligo.org/api/superevents/'+graceid+'/files/LALInference'+version+'.multiorder.fits'+after
     #note: encountered one skymap where the file had .offline. in the name, not sure why. It throws an error though
     file = pathlib.PurePath(url)

@@ -12,8 +12,11 @@ import numpy as np
 import astropy.coordinates
 import astropy.time
 import astropy.units as u
-from GW_GalRank import GW_GalRank
+import sys
+sys.path.append("../HOGWARTs")
+import GW_GalRank
 import createfiles
+
 
 """
 Provide telescope conditions here:
@@ -185,7 +188,7 @@ def process_gcn(payload, root):
         outputdir = cwd+"/.."+"/outputs/GW_GalRank_output/"+graceid+"/"
         #check if all the subfolders exist - if not, make them
         pathlib.Path(outputdir).parent.mkdir(exist_ok=True, parents=True)
-        info, levelsper, ncontour = GW_GalRank(skymap,prob,distest,diststd,distmu,distsigma,distnorm,nside,graceid,prelim,url_main,local_path,outputdir)
+        info, levelsper, ncontour = GW_GalRank.GalRank(skymap,prob,distest,diststd,distmu,distsigma,distnorm,nside,graceid,prelim,url_main,local_path,outputdir)
         createfiles.createasciifile(info,graceid,prelim,levelsper,ncontour,outputdir)
         print("saved ranked galaxies list as ascii file, moving on to tile ranking...")
 
