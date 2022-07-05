@@ -22,7 +22,7 @@ NOTE: pay attention to whether you are looking at gcn alerts with the `role` cla
 
 ## Notes:
 
-The `gwemopt` and `HOGWARTs` codes contain their own README files, and `gwemopt` also has installation documentation. Please refer to those for more instructions.
+The `gwemopt` and `HOGWARTs` codes contain their own README files, and `gwemopt` also has installation documentation. I've also created more thorough documentation in the included pdf file. Please refer to those for more instructions.
 
 ## Acknowledgements:
 
